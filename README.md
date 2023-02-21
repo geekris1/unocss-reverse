@@ -2,6 +2,6 @@ WIP
 
 # Todo:
 
-[X] - width
-[X] - height
+- [X] width
+- [X] height
 [ ] - background 50%
