@@ -1,3 +1,4 @@
+import { calc } from "../share/calc";
 import { remTransform } from "../share/rem";
 import { Rules, } from "../types/rules";
 
@@ -11,8 +12,7 @@ export const height = {
     } else if (/-content/.test(ctx)) {
       suffix = ctx.replace('-content', "")
     } else if (/calc/.test(ctx)) {
-      ctx = ctx.replace(/\s*\-\s*/g, '-')
-      suffix = `[${ctx}]`
+      suffix = calc(ctx)
     }
     return basicName + suffix
 
