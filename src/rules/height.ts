@@ -2,12 +2,12 @@ import { calc } from "../share/calc";
 import { remTransform } from "../share/rem";
 import { Rules, } from "../types/rules";
 
-export const width = {
-  name: 'width',
+export const height = {
+  name: "height",
   match: (ctx: string) => {
-    let basicName = 'w-'
+    const basicName = 'h-'
     let suffix = ctx
-    if (/rem/.test(ctx))
+    if (/rem/.test(ctx)) {
       suffix = remTransform(ctx)
     } else if (/-content/.test(ctx)) {
       suffix = ctx.replace('-content', "")
@@ -16,6 +16,5 @@ export const width = {
     }
     return basicName + suffix
 
-    return basicName + suffix
-  },
+  }
 }

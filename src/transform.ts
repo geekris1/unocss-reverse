@@ -8,17 +8,17 @@ export function transform(names: string[], value: string): string | undefined {
 
 function findRules(names: string[], rule?: Rules): Rules | undefined {
   if (rule) {
-    if (names?.length > 0)
-      return findRules(names.slice(0), rule)
-    else
+    if (names?.length > 0 && rule.children) {
+      return findRules(names.slice(1), rule.children[names[0]])
+    } else {
       return rule
   }
   const currentRule = rules.find(rule => rule.name === names[0])
 
   if (currentRule) {
-    if (currentRule.children)
-      return findRules(names.slice(0), currentRule)
-    else
+    if (names.length > 1 && currentRule.children) {
+      return findRules(names.slice(1), currentRule)
+    } else {
       return currentRule
   }
   return undefined
