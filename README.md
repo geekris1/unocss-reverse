@@ -2,6 +2,8 @@ WIP
 
 # Todo:
 
-- [X] width
-- [X] height
+- [x] width
+- [x] height
+- [x] max-width
+- [x] max-height
 - [ ] background 50%
