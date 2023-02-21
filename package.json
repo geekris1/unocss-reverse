@@ -1,0 +1,64 @@
+{
+  "name": "unocss-reverse",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@7.12.0",
+  "description": "",
+  "author": "geekris1 <20094970@qq.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/geekris1",
+  "homepage": "https://github.com/geekris1/unocss-reverse#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antfu/unocss-reverse.git"
+  },
+  "bugs": "https://github.com/antfu/unocss-reverse/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.35.2",
+    "@antfu/ni": "^0.20.0",
+    "@antfu/utils": "^0.7.2",
+    "@types/node": "^18.13.0",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.34.0",
+    "esno": "^0.16.3",
+    "pnpm": "^7.27.0",
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.5",
+    "unbuild": "^1.1.1",
+    "vite": "^4.1.1",
+    "vitest": "^0.28.5"
+  }
+}
