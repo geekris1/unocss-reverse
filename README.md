@@ -4,4 +4,4 @@ WIP
 
 - [X] width
 - [X] height
-- [] background 50%
+- [ ] background 50%
