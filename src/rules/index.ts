@@ -5,6 +5,7 @@ import { background } from './background'
 import { padding } from './padding'
 import { position } from './position'
 import { max } from './max'
+import { margin } from './margin'
 
 export const rules: Rules[] = [
   width,
@@ -13,4 +14,5 @@ export const rules: Rules[] = [
   padding,
   position,
   max,
+  margin,
 ]

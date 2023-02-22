@@ -1,6 +1,3 @@
-
-
-
 export type Rules = {
   name: string,
   children?: { [key: string]: Rules },
