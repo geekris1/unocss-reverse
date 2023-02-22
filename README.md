@@ -9,6 +9,7 @@ WIP
 - [x] margin [JiatLn](https://github.com/JiatLn)
 - [x] padding [JiatLn](https://github.com/JiatLn)
 - [x] cursor [JiatLn](https://github.com/JiatLn)
+- [x] opacity [JiatLn](https://github.com/JiatLn)
 - [x] font-size [Simon-He95](https://github.com/Simon-He95)
 - [ ] background 50%
 - [ ] color
@@ -21,7 +22,6 @@ WIP
 - [ ] clear
 - [ ] top|bottom|left|right
 - [ ] z-index
-- [ ] opacity
 - [ ] list-style
 - [ ] box-shadow
 - [ ] text-shadow
