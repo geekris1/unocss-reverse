@@ -23,7 +23,7 @@ function transformMargin(result: string, names: string[]) {
 
 export const margin: Rules = {
   name: 'margin',
-  transformFn: transformMargin,
+  transform: transformMargin,
   match(ctx) {
     const ctx_list = ctx.split(' ')
     return parseMargin(ctx_list)

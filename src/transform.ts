@@ -5,7 +5,7 @@ export function transform(names: string[], value: string): string | undefined {
   if (!rule)
     return undefined
   const result = rule.match(value)
-  return rule?.transformFn ? rule.transformFn(result, names) : result
+  return rule?.transform ? rule.transform(result, names) : result
 }
 
 function findRules(names: string[], rule?: Rules): Rules | undefined {

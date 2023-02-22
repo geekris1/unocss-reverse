@@ -23,7 +23,7 @@ function transformPadding(result: string, names: string[]) {
 
 export const padding: Rules = {
   name: 'padding',
-  transformFn: transformPadding,
+  transform: transformPadding,
   match(ctx) {
     const ctx_list = ctx.split(' ')
     return parsePadding(ctx_list)
