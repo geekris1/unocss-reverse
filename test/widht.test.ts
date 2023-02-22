@@ -1,6 +1,6 @@
-import { describe, it, expect } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { generator } from '../src/generator'
-describe("width", () => {
+describe('width', () => {
   it('px', () => {
     expect(generator("width:1px")).toBe("w-1px")
   })
