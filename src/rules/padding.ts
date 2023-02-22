@@ -1,5 +1,5 @@
-import { positionMap } from "../share/position";
-import { Rules } from "../types/rules";
+import { positionMap } from '../share/position'
+import type { Rules } from '../types/rules'
 
 const paddingFn: Record<number, Function> = {
   1: (args: string[]) => `p-${args[0]}`,
@@ -9,8 +9,7 @@ const paddingFn: Record<number, Function> = {
 }
 
 function parsePadding(args: string[]) {
-  const size = args.length;
-
+  const size = args.length
   return paddingFn[size](args)
 }
 
