@@ -1,5 +1,5 @@
 import { calc } from '../share/calc'
-import { remTransform } from '../share/rem'
+import { rem } from '../share/rem'
 import type { Rules } from '../types/rules'
 
 export const width: Rules = {
@@ -8,9 +8,9 @@ export const width: Rules = {
     const basicName = 'w-'
     let suffix = ctx
     if (/rem/.test(ctx)) {
-      suffix = remTransform(ctx)
+      suffix = rem(ctx)
     }
-    else if (/ -content /.test(ctx)) {
+    else if (/-content/.test(ctx)) {
       suffix = ctx.replace('-content', '')
     }
     else if (/calc/.test(ctx)) {

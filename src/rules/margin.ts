@@ -1,5 +1,5 @@
-import { positionMap } from "../share/position";
-import { Rules } from "../types/rules";
+import { positionMap } from '../share/position'
+import type { Rules } from '../types/rules'
 
 const marginFn: Record<number, Function> = {
   1: (args: string[]) => `m-${args[0]}`,
@@ -9,7 +9,7 @@ const marginFn: Record<number, Function> = {
 }
 
 function parseMargin(args: string[]) {
-  const size = args.length;
+  const size = args.length
   return marginFn[size](args)
 }
 
@@ -23,7 +23,7 @@ function transformMargin(result: string, names: string[]) {
 
 export const margin: Rules = {
   name: 'margin',
-  transformFn: transformMargin,
+  transform: transformMargin,
   match(ctx) {
     const ctx_list = ctx.split(' ')
     return parseMargin(ctx_list)
