@@ -2,7 +2,9 @@ import { rules } from './rules'
 import type { Rules } from "./types/rules"
 export function transform(names: string[], value: string): string | undefined {
   let rule = findRules(names)
-  return rule ? rule.match(value) : undefined
+  if (!rule) return undefined
+  let result = rule.match(value);
+  return rule?.transformFn ? rule.transformFn(result, names) : result
 }
 
 function findRules(names: string[], rule?: Rules): Rules | undefined {
