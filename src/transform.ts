@@ -26,6 +26,6 @@ function findRules(names: string[], rule?: Rules): Rules | undefined {
     else {
       return currentRule
     }
-    return undefined
   }
+  return undefined
 }

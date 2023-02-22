@@ -10,7 +10,6 @@ const paddingFn: Record<number, Function> = {
 
 function parsePadding(args: string[]) {
   const size = args.length
-
   return paddingFn[size](args)
 }
 
