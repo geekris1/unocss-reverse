@@ -1,2 +1,2 @@
-export * from "./transform"
+export * from './transform'
 export * from './generator'
