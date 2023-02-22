@@ -56,6 +56,5 @@ export function getFirstKey(s: string) {
 
 export function parse(css: string) {
   const attributeValue = parseAttributeName(css)
-
   return attributeValue
 }

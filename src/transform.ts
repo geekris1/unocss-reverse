@@ -10,16 +10,20 @@ function findRules(names: string[], rule?: Rules): Rules | undefined {
   if (rule) {
     if (names?.length > 0 && rule.children) {
       return findRules(names.slice(1), rule.children[names[0]])
-    } else {
+    }
+    else {
       return rule
+    }
   }
   const currentRule = rules.find(rule => rule.name === names[0])
 
   if (currentRule) {
     if (names.length > 1 && currentRule.children) {
       return findRules(names.slice(1), currentRule)
-    } else {
+    }
+    else {
       return currentRule
+    }
+    return undefined
   }
-  return undefined
 }

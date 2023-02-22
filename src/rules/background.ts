@@ -1,103 +1,97 @@
-import { remTransform } from "../share/rem";
-import { Rules } from "../types/rules";
+import type { Rules } from '../types/rules'
 
-const size = /auto|cover|contain/
 export const background: Rules = {
-  name: "background",
+  name: 'background',
   match: backgroundMatch,
   children: {
-    "size": {
-      name: "size",
-      match: backgroundSizeAndAttachmentMatch
+    size: {
+      name: 'size',
+      match: backgroundSizeAndAttachmentMatch,
     },
-    "attachments": {
-      name: "attachments",
-      match: backgroundSizeAndAttachmentMatch
+    attachments: {
+      name: 'attachments',
+      match: backgroundSizeAndAttachmentMatch,
     },
-    "clip": {
-      name: "clip",
-      match: backgroundClipMatch
+    clip: {
+      name: 'clip',
+      match: backgroundClipMatch,
     },
-    "position": {
-      name: "position",
-      match: backgroundPositionMatch
+    position: {
+      name: 'position',
+      match: backgroundPositionMatch,
     },
-    "repeat": {
-      name: "repeat",
-      match: backgroundRepeatMatch
+    repeat: {
+      name: 'repeat',
+      match: backgroundRepeatMatch,
     },
-    "origin": {
-      name: "origin",
-      match: backgroundOriginMatch
+    origin: {
+      name: 'origin',
+      match: backgroundOriginMatch,
     },
-    "image": {
-      name: "image",
-      match: backgroundImageMatch
-    }
-  }
+    image: {
+      name: 'image',
+      match: backgroundImageMatch,
+    },
+  },
 }
 
 function backgroundMatch(ctx: string): string {
-  console.log("2")
-  let basicName = 'bg-'
-  let suffix = ctx
+  const basicName = 'bg-'
+  const suffix = ctx
   return basicName + suffix
 }
 
-
 function backgroundSizeAndAttachmentMatch(ctx: string): string {
-  let basicName = 'bg-'
-  let suffix = ctx
+  const basicName = 'bg-'
+  const suffix = ctx
   return basicName + suffix
 }
 
 function backgroundClipMatch(ctx: string): string {
-  console.log("1")
-  let basicName = 'bg-clip-'
+  const basicName = 'bg-clip-'
   let suffix = ctx
-  if (/border|content|padding/.test(ctx)) {
+  if (/border|content|padding/.test(ctx))
     suffix = ctx.replace('-box', '')
-  }
+
   return basicName + suffix
 }
 
 function backgroundPositionMatch(ctx: string): string {
-  let basicName = 'bg-'
-  let suffix = ctx.replace(/\s+/g, "-")
+  const basicName = 'bg-'
+  const suffix = ctx.replace(/\s+/g, '-')
   return basicName + suffix
 }
 
-
-
 function backgroundRepeatMatch(ctx: string): string {
-  let basicName = 'bg-repeat-'
+  const basicName = 'bg-repeat-'
   let suffix = ctx
-  if (ctx === 'repeat') { return "bg-repeat" }
-  else if (ctx === 'no-repeat') { return "bg-no-repeat" }
-  else if (/repeat-[xy]/.test(ctx)) {
-    suffix = ctx.replace("repeat-", "")
-  }
+  if (ctx === 'repeat')
+    return 'bg-repeat'
+  else if (ctx === 'no-repeat')
+    return 'bg-no-repeat'
+  else if (/repeat-[xy]/.test(ctx))
+    suffix = ctx.replace('repeat-', '')
+
   return basicName + suffix
 }
 
 function backgroundOriginMatch(ctx: string): string {
-  let basicName = 'bg-origin-'
+  const basicName = 'bg-origin-'
   let suffix = ctx
-  if (/[border|padding|content]-box/.test(ctx)) {
-    suffix = ctx.replace('-box', "")
-  }
+  if (/[border|padding|content]-box/.test(ctx))
+    suffix = ctx.replace('-box', '')
+
   return basicName + suffix
 }
 
 function backgroundImageMatch(ctx: string): string {
-  let basicName = 'bg-'
+  const basicName = 'bg-'
   let suffix = ctx
-  if (ctx === 'none') {
-    return "bg-none"
-  } else if (/url/.test(ctx)) {
+  if (ctx === 'none')
+    return 'bg-none'
+  else if (/url/.test(ctx))
     suffix = imageUrl(ctx)
 
-  }
   return basicName + suffix
 }
 

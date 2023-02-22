@@ -1,8 +1,7 @@
-import { describe, it, expect } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { generator } from '../src/generator'
-describe("position", () => {
+describe('position', () => {
   it('position:absolute', () => {
-    expect(generator("position:absolute")).toBe("pos-absolute")
+    expect(generator('position:absolute')).toBe('pos-absolute')
   })
-
 })
