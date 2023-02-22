@@ -6,7 +6,7 @@ import { position } from './position'
 import { font } from './font'
 import { cursor } from './cursor'
 import { opacity } from './opacity'
-
+import { colors } from './colors'
 export const rules: Rule[] = [
   size,
   background,
@@ -16,4 +16,5 @@ export const rules: Rule[] = [
   font,
   cursor,
   opacity,
+  colors,
 ].flat(1)
