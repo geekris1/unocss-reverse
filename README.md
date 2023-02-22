@@ -8,6 +8,7 @@ WIP
 - [x] max-height
 - [x] margin [JiatLn](https://github.com/JiatLn)
 - [x] padding [JiatLn](https://github.com/JiatLn)
+- [x] cursor [JiatLn](https://github.com/JiatLn)
 - [x] font-size [Simon-He95](https://github.com/Simon-He95)
 - [ ] background 50%
 - [ ] color
@@ -22,9 +23,8 @@ WIP
 - [ ] z-index
 - [ ] opacity
 - [ ] list-style
-- [ ] cursor
 - [ ] box-shadow
-- [ ] test-shadow
+- [ ] text-shadow
 - [ ] transform
 - [ ] transition
 - [ ] animation

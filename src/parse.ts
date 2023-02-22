@@ -12,6 +12,10 @@ export function parseAttributeName(css: string): [string[], string] | undefined 
 }
 
 export function parse(css: string) {
+  // drop the semicolon at the end
+  while (css.endsWith(';')) {
+    css = css.slice(0, -1)
+  }
   const attributeValue = parseAttributeName(css)
   return attributeValue
 }
