@@ -8,6 +8,7 @@ import { max } from './max'
 import { margin } from './margin'
 import { font } from './font'
 import { cursor } from './cursor'
+import { opacity } from './opacity'
 
 export const rules: Rules[] = [
   width,
@@ -19,4 +20,5 @@ export const rules: Rules[] = [
   margin,
   font,
   cursor,
+  opacity,
 ]
