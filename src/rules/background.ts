@@ -1,39 +1,15 @@
 import type { Rules } from '../types/rules'
 
-export const background: Rules = {
-  name: 'background',
-  match: backgroundMatch,
-  children: {
-    size: {
-      name: 'size',
-      match: backgroundSizeAndAttachmentMatch,
-    },
-    attachments: {
-      name: 'attachments',
-      match: backgroundSizeAndAttachmentMatch,
-    },
-    clip: {
-      name: 'clip',
-      match: backgroundClipMatch,
-    },
-    position: {
-      name: 'position',
-      match: backgroundPositionMatch,
-    },
-    repeat: {
-      name: 'repeat',
-      match: backgroundRepeatMatch,
-    },
-    origin: {
-      name: 'origin',
-      match: backgroundOriginMatch,
-    },
-    image: {
-      name: 'image',
-      match: backgroundImageMatch,
-    },
-  },
-}
+export const background: Rules = [
+  { name: 'background', transform: backgroundMatch },
+  { name: 'background-size', transform: backgroundSizeAndAttachmentMatch },
+  { name: 'background-attachments', transform: backgroundSizeAndAttachmentMatch },
+  { name: 'background-clip', transform: backgroundClipMatch },
+  { name: 'background-position', transform: backgroundPositionMatch },
+  { name: 'background-repeat', transform: backgroundRepeatMatch },
+  { name: 'background-origin', transform: backgroundOriginMatch },
+  { name: 'background-image', transform: backgroundImageMatch },
+]
 
 function backgroundMatch(ctx: string): string {
   const basicName = 'bg-'

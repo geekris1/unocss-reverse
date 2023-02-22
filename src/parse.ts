@@ -1,13 +1,13 @@
-export function parseAttributeName(css: string): [string[], string] | undefined {
+export function parseAttributeName(css: string): [string, string[], string] | undefined {
   const reg = /(.+):{1}(.+)/
   const matchValue = css.match(reg)
   if (!matchValue) {
     return undefined
   }
   else {
-    const [_, names, values] = matchValue
-    const splitNames = names.trim().split('-')
-    return [splitNames, values.trim()]
+    const [_, name, values] = matchValue
+    const names = name.trim().split('-')
+    return [name, names, values.trim()]
   }
 }
 

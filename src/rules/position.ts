@@ -1,6 +1,6 @@
 export const position = {
   name: 'position',
-  match: (ctx: string) => {
+  transform: (ctx: string) => {
     const basicName = 'pos-'
     const suffix = ctx
     return basicName + suffix
