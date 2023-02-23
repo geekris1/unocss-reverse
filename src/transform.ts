@@ -7,7 +7,7 @@ export function transform(name: string, names: string[], ctx: string): string | 
   if (!rule)
     return undefined
   const matchReturnValue = typeof rule.match === 'function' ? rule.match(name, names, ctx) : undefined
-  return typeof rule.transform === 'function' ? rule.transform(ctx, matchReturnValue || '', names) : undefined
+  return typeof rule.transform === 'function' ? rule.transform(ctx, matchReturnValue || '', names) : matchReturnValue
 }
 
 function findRules(name: string): Rule | undefined {

@@ -11,15 +11,17 @@ WIP
 - [x] padding [JiatLn](https://github.com/JiatLn)
 - [x] cursor [JiatLn](https://github.com/JiatLn)
 - [x] opacity [JiatLn](https://github.com/JiatLn)
+- [x] display [JiatLn](https://github.com/JiatLn)
+- [x] float [JiatLn](https://github.com/JiatLn)
+- [x] clear [JiatLn](https://github.com/JiatLn)
+- [x] object-fit [JiatLn](https://github.com/JiatLn)
+- [x] (align|justify|place)-(content|items|self) [JiatLn](https://github.com/JiatLn)
 - [x] font-size [Simon-He95](https://github.com/Simon-He95)
 - [ ] background 50%
 - [ ] font-\[width|style|family|\]
 - [ ] text-align
 - [ ] line-height
 - [ ] border
-- [ ] display
-- [ ] float
-- [ ] clear
 - [ ] top|bottom|left|right
 - [ ] z-index
 - [ ] list-style
@@ -28,6 +30,4 @@ WIP
 - [ ] transform
 - [ ] transition
 - [ ] animation
-- [ ] justify-content
-- [ ] align-item
 - [ ] flex-\[direction|wrap|flow\]
