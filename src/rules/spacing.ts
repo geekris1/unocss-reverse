@@ -22,7 +22,7 @@ const spacingValueFunction: Record<number, Function> = {
 
 function parseMargin(basic: string, args: string[]) {
   const size = args.length
-  return spacingValueFunction[size](basic, args)
+  return spacingValueFunction[size]?.(basic, args)
 }
 
 function transformSpacing(ctx: string, basic: string) {

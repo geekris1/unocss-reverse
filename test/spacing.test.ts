@@ -14,6 +14,9 @@ describe('padding', () => {
   it('padding:50px 30px 20px 40px', () => {
     expect(generator('padding:50px 30px 20px 40px')).toBe('pt-50px pb-20px pl-40px pr-30px')
   })
+  // it('padding:50px 30px 20px 40px 50px', () => {
+  //   expect(generator('padding:50px 30px 20px 40px 50px')).toBeUndefined()
+  // })
 })
 
 describe('padding-left', () => {
