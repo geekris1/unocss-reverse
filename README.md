@@ -15,9 +15,7 @@ WIP
 - [x] float [JiatLn](https://github.com/JiatLn)
 - [x] clear [JiatLn](https://github.com/JiatLn)
 - [x] object-fit [JiatLn](https://github.com/JiatLn)
-- [x] align-items [JiatLn](https://github.com/JiatLn)
-- [x] justify-content [JiatLn](https://github.com/JiatLn)
-- [x] justify-items [JiatLn](https://github.com/JiatLn)
+- [x] (align|justify|place)-(content|items|self) [JiatLn](https://github.com/JiatLn)
 - [x] font-size [Simon-He95](https://github.com/Simon-He95)
 - [ ] background 50%
 - [ ] font-\[width|style|family|\]

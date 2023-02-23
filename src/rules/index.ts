@@ -1,5 +1,4 @@
 import type { Rule } from '../types/rules'
-import { alignItems } from './align-items'
 import { size } from './size'
 import { background } from './background'
 import { margin, padding } from './spacing'
@@ -11,11 +10,10 @@ import { opacity } from './opacity'
 import { colors } from './colors'
 import { display } from './display'
 import { normal } from './normal'
-import { justifyContent } from './justify-content'
+import { flexbox } from './flexbox'
 
 export const rules: Rule[] = [
-  alignItems,
-  justifyContent,
+  flexbox,
   normal,
   size,
   background,
