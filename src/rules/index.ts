@@ -11,9 +11,11 @@ import { opacity } from './opacity'
 import { colors } from './colors'
 import { display } from './display'
 import { normal } from './normal'
+import { justifyContent } from './justify-content'
 
 export const rules: Rule[] = [
   alignItems,
+  justifyContent,
   normal,
   size,
   background,
