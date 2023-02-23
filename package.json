@@ -46,7 +46,8 @@
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "prompt": "node ./scripts/prompt.js"
+    "prompt": "node ./scripts/prompt.js",
+    "plop": "node ./scripts/plop.js"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.2",
@@ -57,6 +58,7 @@
     "eslint": "^8.34.0",
     "esno": "^0.16.3",
     "fast-glob": "^3.2.12",
+    "minimist": "^1.2.8",
     "pnpm": "^7.27.0",
     "readdir": "^1.0.2",
     "rimraf": "^4.1.2",
@@ -64,5 +66,8 @@
     "unbuild": "^1.1.1",
     "vite": "^4.1.1",
     "vitest": "^0.28.5"
+  },
+  "dependencies": {
+    "unocss-reverse": "link:"
   }
 }
