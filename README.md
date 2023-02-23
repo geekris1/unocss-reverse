@@ -7,6 +7,8 @@ WIP
 - [x] max-width
 - [x] max-height
 - [x] color
+- [x] z-index
+- [x] top|bottom|left|right
 - [x] margin [JiatLn](https://github.com/JiatLn)
 - [x] padding [JiatLn](https://github.com/JiatLn)
 - [x] cursor [JiatLn](https://github.com/JiatLn)
@@ -22,8 +24,6 @@ WIP
 - [ ] text-align
 - [ ] line-height
 - [ ] border
-- [ ] top|bottom|left|right
-- [ ] z-index
 - [ ] list-style
 - [ ] box-shadow
 - [ ] text-shadow

@@ -2,7 +2,7 @@ import type { Rule } from '../types/rules'
 import { sizes } from './sizes'
 import { background } from './background'
 import { margin, padding } from './spacing'
-import { position } from './position'
+import { directions, position } from './position'
 import { font } from './font'
 import { cursor } from './cursor'
 import { objectFit } from './object-fit'
@@ -26,4 +26,5 @@ export const rules: Rule[] = [
   opacity,
   colors,
   display,
+  directions,
 ].flat(1)
