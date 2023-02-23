@@ -14,6 +14,7 @@ WIP
 - [x] display [JiatLn](https://github.com/JiatLn)
 - [x] float|clear [JiatLn](https://github.com/JiatLn)
 - [x] object-fit [JiatLn](https://github.com/JiatLn)
+- [x] align-items [JiatLn](https://github.com/JiatLn)
 - [x] font-size [Simon-He95](https://github.com/Simon-He95)
 - [ ] background 50%
 - [ ] font-\[width|style|family|\]
@@ -29,5 +30,4 @@ WIP
 - [ ] transition
 - [ ] animation
 - [ ] justify-content
-- [ ] align-item
 - [ ] flex-\[direction|wrap|flow\]
