@@ -8,8 +8,10 @@ import { cursor } from './cursor'
 import { opacity } from './opacity'
 import { colors } from './colors'
 import { display } from './display'
+import { normal } from './normal'
 
 export const rules: Rule[] = [
+  normal,
   size,
   background,
   padding,

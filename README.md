@@ -12,14 +12,13 @@ WIP
 - [x] cursor [JiatLn](https://github.com/JiatLn)
 - [x] opacity [JiatLn](https://github.com/JiatLn)
 - [x] display [JiatLn](https://github.com/JiatLn)
+- [x] float|clear [JiatLn](https://github.com/JiatLn)
 - [x] font-size [Simon-He95](https://github.com/Simon-He95)
 - [ ] background 50%
 - [ ] font-\[width|style|family|\]
 - [ ] text-align
 - [ ] line-height
 - [ ] border
-- [ ] float
-- [ ] clear
 - [ ] top|bottom|left|right
 - [ ] z-index
 - [ ] list-style
