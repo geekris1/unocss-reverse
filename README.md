@@ -12,10 +12,12 @@ WIP
 - [x] cursor [JiatLn](https://github.com/JiatLn)
 - [x] opacity [JiatLn](https://github.com/JiatLn)
 - [x] display [JiatLn](https://github.com/JiatLn)
-- [x] float|clear [JiatLn](https://github.com/JiatLn)
+- [x] float [JiatLn](https://github.com/JiatLn)
+- [x] clear [JiatLn](https://github.com/JiatLn)
 - [x] object-fit [JiatLn](https://github.com/JiatLn)
 - [x] align-items [JiatLn](https://github.com/JiatLn)
 - [x] justify-content [JiatLn](https://github.com/JiatLn)
+- [x] justify-items [JiatLn](https://github.com/JiatLn)
 - [x] font-size [Simon-He95](https://github.com/Simon-He95)
 - [ ] background 50%
 - [ ] font-\[width|style|family|\]

@@ -24,3 +24,17 @@ describe('clear', () => {
     expect(generator('clear:both')).toBe('clear-both')
   })
 })
+
+describe('justify-items', () => {
+  it('justify-items: center;', () => {
+    expect(generator('justify-items: center;')).toBe('justify-items-center')
+  })
+
+  it('justify-items: start;', () => {
+    expect(generator('justify-items: start;')).toBe('justify-items-start')
+  })
+
+  it('justify-items: revert-layer;', () => {
+    expect(generator('justify-items: revert-layer;')).toBe('justify-items-revert-layer')
+  })
+})
