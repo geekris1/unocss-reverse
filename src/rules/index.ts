@@ -7,6 +7,8 @@ import { font } from './font'
 import { cursor } from './cursor'
 import { opacity } from './opacity'
 import { colors } from './colors'
+import { display } from './display'
+
 export const rules: Rule[] = [
   size,
   background,
@@ -17,4 +19,5 @@ export const rules: Rule[] = [
   cursor,
   opacity,
   colors,
+  display,
 ].flat(1)
