@@ -1,5 +1,5 @@
 import type { Rule } from '../types/rules'
-import { size } from './size'
+import { sizes } from './sizes'
 import { background } from './background'
 import { margin, padding } from './spacing'
 import { position } from './position'
@@ -15,7 +15,7 @@ import { flexbox } from './flexbox'
 export const rules: Rule[] = [
   flexbox,
   normal,
-  size,
+  sizes,
   background,
   padding,
   position,

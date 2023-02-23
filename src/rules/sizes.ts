@@ -2,7 +2,7 @@ import { calc } from '../share/calc'
 import { rem } from '../share/rem'
 import type { Rules } from '../types/rules'
 const reg = /(max-)?(width|height)/
-export const size: Rules = {
+export const sizes: Rules = {
   name: reg,
   transform,
   match: (_, names: string[]) => {
