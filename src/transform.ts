@@ -1,31 +1,22 @@
 import { rules } from './rules'
-import type { Rules } from './types/rules'
-export function transform(names: string[], value: string): string | undefined {
-  const rule = findRules(names)
+import { isRegExp } from './share/units'
+import type { Rule } from './types/rules'
+
+export function transform(name: string, names: string[], ctx: string): string | undefined {
+  const rule = findRules(name)
   if (!rule)
     return undefined
-  const result = rule.match(value)
-  return rule?.transform ? rule.transform(result, names) : result
+  const matchReturnValue = typeof rule.match === 'function' ? rule.match(name, names, ctx) : undefined
+  return typeof rule.transform === 'function' ? rule.transform(ctx, matchReturnValue || '', names) : undefined
 }
 
-function findRules(names: string[], rule?: Rules): Rules | undefined {
-  if (rule) {
-    if (names?.length > 0 && rule.children) {
-      return findRules(names.slice(1), rule.children[names[0]])
+function findRules(name: string): Rule | undefined {
+  return rules.find((rule) => {
+    if (isRegExp(rule.name)) {
+      return (rule.name as RegExp).test(name)
     }
     else {
-      return rule
+      return rule.name === name
     }
-  }
-  const currentRule = rules.find(rule => rule.name === names[0])
-
-  if (currentRule) {
-    if (names.length > 1 && currentRule.children) {
-      return findRules(names.slice(1), currentRule)
-    }
-    else {
-      return currentRule
-    }
-  }
-  return undefined
+  })
 }

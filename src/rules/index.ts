@@ -1,24 +1,20 @@
-import type { Rules } from '../types/rules'
-import { width } from './width'
-import { height } from './height'
+import type { Rule } from '../types/rules'
+import { size } from './size'
 import { background } from './background'
-import { padding } from './padding'
+import { margin, padding } from './spacing'
 import { position } from './position'
-import { max } from './max'
-import { margin } from './margin'
 import { font } from './font'
 import { cursor } from './cursor'
 import { opacity } from './opacity'
-
-export const rules: Rules[] = [
-  width,
-  height,
+import { colors } from './colors'
+export const rules: Rule[] = [
+  size,
   background,
   padding,
   position,
-  max,
   margin,
   font,
   cursor,
   opacity,
-]
+  colors,
+].flat(1)

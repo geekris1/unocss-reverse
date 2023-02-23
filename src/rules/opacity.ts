@@ -2,7 +2,7 @@ import type { Rules } from '../types/rules'
 
 export const opacity: Rules = {
   name: 'opacity',
-  match(ctx) {
+  transform(ctx) {
     const basicName = 'op-'
     let isPercentage = false
     if (ctx.includes('%')) {
