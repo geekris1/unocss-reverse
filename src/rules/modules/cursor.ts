@@ -1,6 +1,6 @@
-import type { Rules } from '../types/rules'
+import type { Rule } from '@/types/rules'
 
-export const cursor: Rules = {
+export const cursor: Rule = {
   name: 'cursor',
   transform(ctx) {
     const basicName = 'cursor-'

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { generator } from '../src/generator'
+import { generator } from '@/generator'
 describe('position', () => {
   it('position:static', () => {
     expect(generator('position:static')).toBe('pos-static')

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { generator } from '../src/generator'
+import { generator } from '@/generator'
 
 describe('cursor', () => {
   it('cursor: pointer', () => {

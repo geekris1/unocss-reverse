@@ -1,4 +1,4 @@
-import type { Rules } from '../types/rules'
+import type { Rule } from '@/types/rules'
 
 const specialValueMap: Map<string, string> = new Map([
   ['flex-start', 'start'],
@@ -15,7 +15,7 @@ const nameMap: Map<string, string> = new Map([
   ['justify-content', 'justify'],
 ])
 
-export const flexbox: Rules = {
+export const flexbox: Rule = {
   name: /(align|justify|place)-(content|items|self)/,
   transform(ctx, basic: string) {
     ctx = specialValueMap.get(ctx) || ctx

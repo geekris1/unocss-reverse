@@ -1,5 +1,6 @@
-import { rem } from '../share/rem'
-import type { Rules } from '../types/rules'
+import { rem } from '@/share/rem'
+import type { Rules } from '@/types/rules'
+
 export const font: Rules = [
   {
     name: 'font',

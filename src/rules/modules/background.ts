@@ -1,4 +1,4 @@
-import type { Rules } from '../types/rules'
+import type { Rules } from '@/types/rules'
 
 export const background: Rules = [
   { name: 'background', transform: backgroundMatch },

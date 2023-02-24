@@ -1,6 +1,6 @@
-import type { Rules } from '../types/rules'
+import type { Rule } from '@/types/rules'
 
-export const opacity: Rules = {
+export const opacity: Rule = {
   name: 'opacity',
   transform(ctx) {
     const basicName = 'op-'

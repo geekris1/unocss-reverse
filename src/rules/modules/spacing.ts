@@ -1,13 +1,13 @@
-import { positionMap } from '../share/position'
-import type { Rules } from '../types/rules'
+import type { Rule } from '@/types/rules'
+import { positionMap } from '@/share/position'
 
-export const padding: Rules = {
+export const padding: Rule = {
   name: /padding(-(left|right|top|bottom))*$/,
   transform: transformSpacing,
   match: spacingMatch('p'),
 }
 
-export const margin: Rules = {
+export const margin: Rule = {
   name: /margin(-(left|right|top|bottom))*$/,
   transform: transformSpacing,
   match: spacingMatch('m'),

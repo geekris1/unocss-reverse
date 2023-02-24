@@ -1,4 +1,4 @@
-import type { Rule } from '../types/rules'
+import type { Rule } from '@/types/rules'
 
 const cssColorReg = /^(#|hsl|hsla|hwb|lab|lch|oklab|oklch|rgb|rgba)/
 
