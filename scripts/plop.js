@@ -31,9 +31,16 @@ function readRuleFileNames() {
   return ruleFiles.map(i => i.replace(/\.\/src\/rules(\/modules)?\/(.*).ts/, '$2'))
 }
 
+function toCamelCase(name) {
+  const arr = name.split('-')
+  const res = arr.map(item => item[0].toUpperCase() + item.slice(1)).join('')
+  return res[0].toLowerCase() + res.slice(1)
+}
+
 function template(name) {
   return `import type { Rule } from '@/types/rules'
-export const ${name}: Rule = {
+
+export const ${toCamelCase(name)}: Rule = {
   name: '${name}',
   transform(ctx: string) {
     return ''
