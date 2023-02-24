@@ -9,12 +9,15 @@ function init() {
   if (name) {
     const ruleFileNames = readRuleFileNames()
     if (ruleFileNames.includes(name)) {
-      console.error('【plop Error: The file already exists!')
-      console.log('')
+      console.error(`[plop Error]: The file <${name}> already exists!\n`)
       process.exit(1)
     }
     else {
+      console.info(`[plop]: The file <${name}> has been created successfully!\n`)
+      // rule file
       writeFile(normalize(join(cwd(), `/src/rules/modules/${name}.ts`)), template(name))
+      // test file
+      writeFile(normalize(join(cwd(), `/test/${name}.test.ts`)), templateTest(name))
     }
   }
   else {
@@ -41,4 +44,17 @@ export const ${name}: Rule = {
 }
 `
 }
+
+function templateTest(name) {
+  return `import { describe, expect, it } from 'vitest'
+import { generator } from '@/generator'
+
+describe('${name}', () => {
+  it('${name}', () => {
+    expect(generator('${name}')).toBe('${name}')
+  })
+})
+`
+}
+
 init()
