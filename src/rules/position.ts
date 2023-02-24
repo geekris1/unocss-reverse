@@ -1,8 +1,9 @@
+import type { Rule } from '../types/rules'
 import { unitOfLengthTransform } from '../share/lengthOfUnit'
-import type { Rules } from '../types/rules'
 
 const alias: Record<string, string> = { 'position': 'pos', 'z-index': 'z' }
-export const position: Rules = {
+
+export const position: Rule = {
   name: /^(position|z-index)$/,
   transform: (ctx: string, basic: string) => {
     const suffix = ctx
@@ -13,7 +14,7 @@ export const position: Rules = {
   },
 }
 
-export const directions: Rules = {
+export const directions: Rule = {
   name: /^(top|left|right|bottom)$/,
   transform: (ctx: string, basic: string) => {
     return `${basic}-${unitOfLengthTransform(ctx) || ctx}`

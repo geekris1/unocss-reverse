@@ -1,9 +1,10 @@
+import type { Rule } from '../types/rules'
 import { calc } from '../share/calc'
 import { rem } from '../share/rem'
 
-export const height = {
+export const height: Rule = {
   name: 'height',
-  match: (ctx: string) => {
+  match: (name, names, ctx: string) => {
     const basicName = 'h-'
     let suffix = ctx
     if (/rem/.test(ctx))
@@ -12,7 +13,6 @@ export const height = {
       suffix = ctx.replace('-content', '')
     else if (/calc/.test(ctx))
       suffix = calc(ctx)
-
     return basicName + suffix
   },
 }

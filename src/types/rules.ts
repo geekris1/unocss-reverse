@@ -13,4 +13,4 @@ export interface Rule {
   match?: (name: string, names: string[], ctx: string) => string | undefined
 }
 
-export type Rules = Rule | Rule[]
+export type Rules = Rule[]
