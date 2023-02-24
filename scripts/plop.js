@@ -1,6 +1,6 @@
 import { writeFile } from 'fs/promises'
 import { cwd } from 'process'
-import { join } from 'path'
+import { join, normalize } from 'path'
 import minimist from 'minimist'
 import fg from 'fast-glob'
 
@@ -14,7 +14,7 @@ function init() {
       process.exit(1)
     }
     else {
-      writeFile(join(cwd(), `/src/rules/modules/${name}.ts`), template(name))
+      writeFile(normalize(join(cwd(), `/src/rules/modules/${name}.ts`)), template(name))
     }
   }
   else {
