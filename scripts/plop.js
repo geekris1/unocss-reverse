@@ -9,11 +9,11 @@ function init() {
   if (name) {
     const ruleFileNames = readRuleFileNames()
     if (ruleFileNames.includes(name)) {
-      console.error('The file already exists!')
+      console.error('【plop Error: The file already exists!')
+      console.log('')
       process.exit(1)
     }
     else {
-      console.log(template(name))
       writeFile(join(cwd(), `/src/rules/modules/${name}.ts`), template(name))
     }
   }
@@ -24,8 +24,8 @@ function init() {
 
 function readRuleFileNames() {
   // '!./src/rules/index.ts'
-  const ruleFiles = fg.sync(['./src/rules/**.ts'])
-  return ruleFiles.map(i => i.replace(/\.\/src\/rules\/(.*).ts/, '$1'))
+  const ruleFiles = fg.sync(['./src/rules/**/*.ts'])
+  return ruleFiles.map(i => i.replace(/\.\/src\/rules(\/modules)?\/(.*).ts/, '$2'))
 }
 
 function template(name) {
