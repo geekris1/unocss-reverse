@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { generator } from '../src/generator'
+import { generator } from '@/generator'
+
 describe('background', () => {
   it('background:red', () => {
     expect(generator('background:red')).toBe('bg-red')

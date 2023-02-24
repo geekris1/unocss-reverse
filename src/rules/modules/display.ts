@@ -1,4 +1,4 @@
-import type { Rule } from '../types/rules'
+import type { Rule } from '@/types/rules'
 
 const specialDisplayMap: Map<string, string> = new Map([
   ['none', 'hidden'],

@@ -1,30 +1,28 @@
-import type { Rule } from '../types/rules'
-import { sizes } from './sizes'
-import { background } from './background'
-import { margin, padding } from './spacing'
-import { directions, position } from './position'
-import { font } from './font'
-import { cursor } from './cursor'
-import { objectFit } from './object-fit'
-import { opacity } from './opacity'
-import { colors } from './colors'
-import { display } from './display'
-import { normal } from './normal'
-import { flexbox } from './flexbox'
+import type { Rule, Rules } from '@/types/rules'
 
-export const rules: Rule[] = [
-  flexbox,
-  normal,
-  sizes,
-  background,
-  padding,
-  position,
-  margin,
-  font,
-  cursor,
-  objectFit,
-  opacity,
-  colors,
-  display,
-  directions,
-].flat(1)
+function autoImportRule() {
+  const modules = import.meta.glob('./modules/*.ts', {
+    import: '*',
+    eager: true,
+  }) as Record<string, Record<string, Rule | Rules>>
+
+  const ruleList: Rule[] = []
+
+  Object.values(modules).forEach((module) => {
+    for (const key in module) {
+      const ruleLike = module[key]
+      if (Array.isArray(ruleLike)) {
+        (ruleLike as Rules).forEach((rule) => {
+          ruleList.push(rule)
+        })
+      }
+      else {
+        ruleList.push(ruleLike as Rule)
+      }
+    }
+  })
+
+  return ruleList.flat()
+}
+
+export const rules = autoImportRule()

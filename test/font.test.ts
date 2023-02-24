@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { generator } from '../src/generator'
+import { generator } from '@/generator'
 describe('font-size', () => {
   it('font-size1', () => {
     expect(generator('font-size: 1.5rem')).toBe('text-6')

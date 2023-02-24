@@ -14,7 +14,7 @@ function init() {
     }
     else {
       console.log(template(name))
-      writeFile(join(cwd(), `/src/rules/${name}.ts`), template(name))
+      writeFile(join(cwd(), `/src/rules/modules/${name}.ts`), template(name))
     }
   }
   else {
@@ -29,8 +29,8 @@ function readRuleFileNames() {
 }
 
 function template(name) {
-  return `import type { Rules } from '../types/rules'
-export const ${name}: Rules = {
+  return `import type { Rule } from '@/types/rules'
+export const ${name}: Rule = {
   name: '${name}',
   transform(ctx: string) {
     return ''

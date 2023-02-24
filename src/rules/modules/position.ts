@@ -1,5 +1,5 @@
-import type { Rule } from '../types/rules'
-import { unitOfLengthTransform } from '../share/lengthOfUnit'
+import type { Rule } from '@/types/rules'
+import { unitOfLengthTransform } from '@/share/lengthOfUnit'
 
 const alias: Record<string, string> = { 'position': 'pos', 'z-index': 'z' }
 

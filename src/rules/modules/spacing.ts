@@ -1,5 +1,5 @@
-import type { Rule } from '../types/rules'
-import { positionMap } from '../share/position'
+import type { Rule } from '@/types/rules'
+import { positionMap } from '@/share/position'
 
 export const padding: Rule = {
   name: /padding(-(left|right|top|bottom))*$/,

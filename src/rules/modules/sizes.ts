@@ -1,6 +1,6 @@
-import type { Rule } from '../types/rules'
-import { calc } from '../share/calc'
-import { rem } from '../share/rem'
+import type { Rule } from '@/types/rules'
+import { calc } from '@/share/calc'
+import { rem } from '@/share/rem'
 
 const reg = /(max-)?(width|height)/
 

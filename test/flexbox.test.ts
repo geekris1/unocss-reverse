@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { generator } from '../src/generator'
+import { generator } from '@/generator'
 
 describe('align-items', () => {
   it('align-items: center', () => {

@@ -1,4 +1,4 @@
-import type { Rule } from '../types/rules'
+import type { Rule } from '@/types/rules'
 
 export const normal: Rule = {
   name: /float|clear/,

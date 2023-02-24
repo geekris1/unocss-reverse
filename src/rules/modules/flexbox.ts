@@ -1,4 +1,4 @@
-import type { Rule } from '../types/rules'
+import type { Rule } from '@/types/rules'
 
 const specialValueMap: Map<string, string> = new Map([
   ['flex-start', 'start'],
