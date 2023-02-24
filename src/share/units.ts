@@ -3,5 +3,5 @@ export function isRegExp(value: string | RegExp): boolean {
 }
 
 export function isFunction(value: unknown) {
-  return typeof value == 'function'
+  return typeof value === 'function'
 }
