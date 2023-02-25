@@ -100,3 +100,21 @@ describe('max-width', () => {
     expect(generator('max-height:max-content')).toBe('max-h-max')
   })
 })
+
+describe('min-width', () => {
+  it('min-width:50px', () => {
+    expect(generator('min-width:50px')).toBe('min-w-50px')
+  })
+
+  it('min-width:min-content', () => {
+    expect(generator('min-width:min-content')).toBe('min-w-min')
+  })
+
+  it('min-height:50px', () => {
+    expect(generator('min-height:50px')).toBe('min-h-50px')
+  })
+
+  it('min-height:min-content', () => {
+    expect(generator('min-height:min-content')).toBe('min-h-min')
+  })
+})

@@ -2,10 +2,8 @@ WIP
 
 # Todo:
 
-- [x] width
-- [x] height
-- [x] max-width
-- [x] max-height
+- [x] width|height
+- [x] (max|min)-(width|height)
 - [x] color
 - [x] z-index
 - [x] top|bottom|left|right
