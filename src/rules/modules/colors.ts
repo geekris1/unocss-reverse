@@ -1,10 +1,6 @@
 import type { Rule } from '@/types/rules'
+import { colorAlias, cssColorReg } from '@/share/constants'
 
-const cssColorReg = /^(#|hsl|hsla|hwb|lab|lch|oklab|oklch|rgb|rgba)/
-
-const colorAlias: Record<string, string> = {
-  currentColor: 'current',
-}
 export const colors: Rule = {
   name: 'color',
   transform: (ctx: string) => {

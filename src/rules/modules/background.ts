@@ -1,14 +1,16 @@
+import { colorAlias, cssColorReg } from '@/share/constants'
 import type { Rules } from '@/types/rules'
 
 export const background: Rules = [
   { name: 'background', transform: backgroundMatch },
   { name: 'background-size', transform: backgroundSizeAndAttachmentMatch },
-  { name: 'background-attachments', transform: backgroundSizeAndAttachmentMatch },
+  { name: 'background-attachment', transform: backgroundSizeAndAttachmentMatch },
   { name: 'background-clip', transform: backgroundClipMatch },
   { name: 'background-position', transform: backgroundPositionMatch },
   { name: 'background-repeat', transform: backgroundRepeatMatch },
   { name: 'background-origin', transform: backgroundOriginMatch },
   { name: 'background-image', transform: backgroundImageMatch },
+  { name: 'background-color', transform: backgroundColorMatch },
 ]
 
 function backgroundMatch(ctx: string): string {
@@ -66,11 +68,19 @@ function backgroundImageMatch(ctx: string): string {
   if (ctx === 'none')
     return 'bg-none'
   else if (/url/.test(ctx))
-    suffix = imageUrl(ctx)
+    suffix = `[${ctx}]`
 
   return basicName + suffix
 }
 
-function imageUrl(ctx: string): string {
-  return `[${ctx}]`
+function backgroundColorMatch(ctx: string): string {
+  const basic = 'bg-'
+  let suffix = ctx
+  if (cssColorReg.test(ctx)) {
+    suffix = `[${ctx}]`
+  }
+  else if (colorAlias[ctx]) {
+    suffix = colorAlias[ctx]
+  }
+  return basic + suffix
 }
