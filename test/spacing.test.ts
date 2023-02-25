@@ -5,6 +5,9 @@ describe('padding', () => {
   it('padding:50px', () => {
     expect(generator('padding:50px')).toBe('p-50px')
   })
+  it('padding:-50px', () => {
+    expect(generator('padding:-50px')).toBe('p--50px')
+  })
   it('padding:50px 30px', () => {
     expect(generator('padding:50px 30px')).toBe('px-30px py-50px')
   })
@@ -46,6 +49,9 @@ describe('padding-bottom', () => {
 describe('margin', () => {
   it('margin:50px', () => {
     expect(generator('margin:50px')).toBe('m-50px')
+  })
+  it('margin:-50px', () => {
+    expect(generator('margin:-50px')).toBe('m--50px')
   })
   it('margin:50px 30px', () => {
     expect(generator('margin:50px 30px')).toBe('mx-30px my-50px')
