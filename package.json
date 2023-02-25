@@ -49,6 +49,9 @@
     "prompt": "node ./scripts/prompt.js",
     "plop": "node ./scripts/plop.js"
   },
+  "dependencies": {
+    "unocss-reverse": "link:"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.2",
     "@antfu/ni": "^0.20.0",
@@ -66,8 +69,5 @@
     "unbuild": "^1.1.1",
     "vite": "^4.1.1",
     "vitest": "^0.28.5"
-  },
-  "dependencies": {
-    "unocss-reverse": "link:"
   }
 }

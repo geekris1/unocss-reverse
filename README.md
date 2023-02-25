@@ -18,10 +18,10 @@ WIP
 - [x] clear [JiatLn](https://github.com/JiatLn)
 - [x] object-fit [JiatLn](https://github.com/JiatLn)
 - [x] (align|justify|place)-(content|items|self) [JiatLn](https://github.com/JiatLn)
+- [x] text-align [JiatLn](https://github.com/JiatLn)
 - [x] font-size [Simon-He95](https://github.com/Simon-He95)
 - [ ] background 50%
 - [ ] font-\[width|style|family|\]
-- [ ] text-align
 - [ ] line-height
 - [ ] border
 - [ ] list-style
