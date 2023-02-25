@@ -168,4 +168,14 @@ describe('background-color', () => {
   it('background-color:rgba(255,255,255,1)', () => {
     expect(generator('background-color:rgba(255,255,255,1)')).toBe('bg-[rgba(255,255,255,1)]')
   })
+
+  it('background-color:currentColor', () => {
+    expect(generator('background-color:currentColor')).toBe('bg-current')
+  })
+  it('background-color:inherit', () => {
+    expect(generator('background-color:inherit')).toBe('bg-inherit')
+  })
+  it('background-color:transparent', () => {
+    expect(generator('background-color:transparent')).toBe('bg-transparent')
+  })
 })

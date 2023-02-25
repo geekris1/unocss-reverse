@@ -10,10 +10,6 @@ describe('color', () => {
     expect(generator('color:rgba(1,1,1,100)')).toBe('c-[rgba(1,1,1,100)]')
   })
 
-  it('color:rgba(1,1,1,100)', () => {
-    expect(generator('color:rgba(1,1,1,100)')).toBe('c-[rgba(1,1,1,100)]')
-  })
-
   it('color:#fff', () => {
     expect(generator('color:#fff')).toBe('c-[#fff]')
   })
