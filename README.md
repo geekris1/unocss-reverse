@@ -53,6 +53,7 @@ WIP
 - [x] [text-align](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align) / [JiatLn](https://github.com/JiatLn)
 - [x] [line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) / [JiatLn](https://github.com/JiatLn)
 - [x] [list-style](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style) / [JiatLn](https://github.com/JiatLn)
+- [X] [letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing) / [JiatLn](https://github.com/JiatLn)
 - [x] [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) / [Simon-He95](https://github.com/Simon-He95)
 
 - [ ] [aspect-ratio](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)
@@ -295,7 +296,6 @@ WIP
 - [ ] [justify-tracks](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-tracks)
 - [ ] [linear-gradient()](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient)
 - [ ] [list-style-type](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type)
-- [ ] [letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
 - [ ] [line-break](https://developer.mozilla.org/en-US/docs/Web/CSS/line-break)
 - [ ] [list-style-position](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position)
 - [ ] [list-style-image](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image)
