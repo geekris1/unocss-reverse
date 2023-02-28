@@ -53,7 +53,8 @@ WIP
 - [x] [text-align](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align) / [JiatLn](https://github.com/JiatLn)
 - [x] [line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) / [JiatLn](https://github.com/JiatLn)
 - [x] [list-style](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style) / [JiatLn](https://github.com/JiatLn)
-- [X] [letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing) / [JiatLn](https://github.com/JiatLn)
+- [x] [letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing) / [JiatLn](https://github.com/JiatLn)
+- [x] [order](https://developer.mozilla.org/en-US/docs/Web/CSS/order) / [JiatLn](https://github.com/JiatLn)
 - [x] [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) / [Simon-He95](https://github.com/Simon-He95)
 
 - [ ] [aspect-ratio](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)
@@ -346,7 +347,6 @@ WIP
 - [ ] [object-position](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position)
 - [ ] [overflow-x](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x)
 - [ ] [outline](https://developer.mozilla.org/en-US/docs/Web/CSS/outline)
-- [ ] [order](https://developer.mozilla.org/en-US/docs/Web/CSS/order)
 - [ ] [overscroll-behavior](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior)
 - [ ] [orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation)
 - [ ] [overflow-y](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y)
