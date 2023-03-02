@@ -26,6 +26,9 @@ function parseMargin(basic: string, args: string[]) {
 }
 
 function transformSpacing(ctx: string, basic: string) {
+  if (ctx.includes('calc')) {
+    return `${basic}-[${ctx}]`.replace(/ /g, '')
+  }
   const ctx_list = ctx.split(' ')
   return parseMargin(basic, ctx_list)
 }

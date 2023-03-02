@@ -26,6 +26,10 @@ describe('padding-left', () => {
   it('padding-left:50px', () => {
     expect(generator('padding-left:50px')).toBe('pl-50px')
   })
+
+  it('padding-left: calc(100% - 30px);', () => {
+    expect(generator('padding-left: calc(100% - 30px);')).toBe('pl-[calc(100%-30px)]')
+  })
 })
 
 describe('padding-right', () => {
@@ -62,6 +66,10 @@ describe('margin', () => {
   it('margin:50px 30px 20px 40px', () => {
     expect(generator('margin:50px 30px 20px 40px')).toBe('mt-50px mb-20px ml-40px mr-30px')
   })
+
+  it('margin: calc(100% - 30px);', () => {
+    expect(generator('margin: calc(100% - 30px);')).toBe('m-[calc(100%-30px)]')
+  })
 })
 
 describe('margin-left', () => {
@@ -79,6 +87,10 @@ describe('margin-right', () => {
 describe('margin-top', () => {
   it('margin-top:50px', () => {
     expect(generator('margin-top:50px')).toBe('mt-50px')
+  })
+
+  it('margin-top: calc(100% - 30px);', () => {
+    expect(generator('margin-top: calc(100% - 30px);')).toBe('mt-[calc(100%-30px)]')
   })
 })
 
